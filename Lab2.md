@@ -23,7 +23,7 @@ HST Serverに適用するライセンスファイルを用意します。
 Asperaを稼働するにはいくつかのLinuxのパッケージをインストールする必要があります。  
 yumを使ってインストールします。  
 
-### 設定方法  
+### 手順  
 下記コマンドを実行してインストールします。rootユーザーで実行します。  
 
 ```
@@ -40,7 +40,7 @@ rpm コマンドもしくはyum コマンドを使ってAspera HST Serverをイ�
 ### 参考URL
 https://download.asperasoft.com/download/docs/entsrv/3.9.3/es_admin_linux/webhelp/index.html#dita/installing_the_product.html
 
-### 設定方法  
+### 手順  
 下記コマンドを実行してインストールします。rootユーザーで実行します。  
 
 ```
@@ -60,7 +60,7 @@ rpm -Uvh /root/ibm-aspera-hsts-3.9.3.174419-linux-64.rpm
 今回はGUIでファイルを読み込む方法で実施します。  
 作業はAspera ServerのVMにGUIでログインし適用します。
 
-### 設定方法
+### 手順
 1. Hyper-Vコンソールを立ち上げます。  
 
 2. Aspera Serverのエントリを右クリックし、[接続]を選択します。ポップアップウインドウが開く、Aspera ServerのGUIコンソールが開きます。  
