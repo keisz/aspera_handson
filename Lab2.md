@@ -1,4 +1,4 @@
-## Lab2 Aspera HST Server のインストール  
+# Lab2 Aspera HST Server のインストール  
 Aspera HST Serverに必要なパッケージと本体をインストールします。  
 
 手順概要は下記です。  
@@ -17,21 +17,42 @@ HST Serverに適用するライセンスファイルを用意します。
 
 個別でハンズオンを行う場合は別途入手が必要です。  
 
+ライセンスファイルは **AsperaServer**上で適用します。Aspera ServerのGUI上からFirefoxを起動しダウンロードします。
 
+### 手順
+1. Hyper-Vコンソールを立ち上げます。  
+
+2. Aspera Serverのエントリを右クリックし、[接続]を選択します。ポップアップウインドウが開く、Aspera ServerのGUIコンソールが開きます。  
+
+3. Userでログインします。ログインパスワードはHyper-Vホストのデスクトップ上においてある **config.txt** を確認してください。  
+
+4. Aspera Serverのデスクトップ上で右クリックし**端末を開く**を選択します。
+
+5. 下記コマンドを実行します。
+   `firefox &`
+
+6. FireFoxが開きます。指定されたURLにアクセスし、ファイルをダウンロードします。  
 
 ## 必要なパッケージのインストール  
 Asperaを稼働するにはいくつかのLinuxのパッケージをインストールする必要があります。  
 yumを使ってインストールします。  
 
 ### 手順  
-下記コマンドを実行してインストールします。rootユーザーで実行します。  
+1. Hyper-Vコンソールを立ち上げます。  
 
-```
-su - 
-# パスワードを求められますので root のパスワードを入力します。  
+2. Aspera Serverのエントリを右クリックし、[接続]を選択します。ポップアップウインドウが開く、Aspera ServerのGUIコンソールが開きます。  
 
-yum install -y httpd perl-Digest-MD5 perl
-```
+3. Userでログインします。ログインパスワードはHyper-Vホストのデスクトップ上においてある **config.txt** を確認してください。  
+
+4. Aspera Serverのデスクトップ上で右クリックし**端末を開く**を選択します。
+
+5. 下記コマンドを実行してインストールします。rootユーザーで実行します。  
+    ```
+    su - 
+    # パスワードを求められますので root のパスワードを入力します。  
+    
+    yum install -y httpd perl-Digest-MD5 perl
+    ```
 
 
 ## Aspera HST Serverのインストール  
@@ -41,7 +62,7 @@ rpm コマンドもしくはyum コマンドを使ってAspera HST Serverをイ�
 https://download.asperasoft.com/download/docs/entsrv/3.9.3/es_admin_linux/webhelp/index.html#dita/installing_the_product.html
 
 ### 手順  
-下記コマンドを実行してインストールします。rootユーザーで実行します。  
+前段で開いた端末上で下記コマンドを実行してインストールします。rootユーザーで実行します。  
 
 ```
 su -
