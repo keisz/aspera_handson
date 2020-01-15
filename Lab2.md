@@ -56,7 +56,9 @@ yumを使ってインストールします。
 
 
 ## Aspera HST Serverのインストール  
-rpm コマンドもしくはyum コマンドを使ってAspera HST Serverをインストールします。  
+rpm コマンドもしくはyum コマンドを使ってAspera HST Serverをインストールします。
+通常、バイナリ（rpm ファイル）は認証付きのAsperaのWebページからダウンロードする必要があります。
+今回は、ファイルをダウンロードし、 **/root/** に配置しています。  
 
 ### 参考URL
 https://download.asperasoft.com/download/docs/entsrv/3.9.3/es_admin_linux/webhelp/index.html#dita/installing_the_product.html
@@ -91,9 +93,16 @@ rpm -Uvh /root/ibm-aspera-hsts-3.9.3.174419-linux-64.rpm
 4. Aspera Serverのデスクトップ上で右クリックし**端末を開く**を選択します。   
 
 5. 下記のコマンドを実行するとAsperaのGUIコンソールが表示されます。  
-   `asperascp &`
+   ```
+   su -
+   #rootのパスワード入力
 
-6. 表示されたポップアップウインドウでダウンロードしたライセンスファイルを指定して適用します。  
+   asperascp &
+   ```
+
+   > AsperaのGUIコンソールはユーザー権限でも開くことはできますが、設定できる内容に制限がかかります。必ずroot権限に変更してから実行してください。  
+
+6. 表示されたポップアップウインドウで**ライセンスファイルのインポート**をクリックし、ダウンロードしたライセンスファイルを指定して適用します。  
    ダウンロードしたファイルは `/home/user/ダウンロード` にあります。フォルダーアイコンをクリックしディレクトリを変更して選択します。
 
 7. ライセンス情報が表示されることを確認後、ウインドウを閉じます。  
@@ -207,7 +216,7 @@ GUIベースで接続する際のセキュリティ設定になります。
    `sudo /opt/aspera/sbin/enablesecure enable`  
    ```
    # sudo /opt/aspera/sbin/enablesecure enable
-   Enter user running apache (default: apache):
+   Enter user running apache (default: apache):  #入力せずにEnter
 
    Successfully enabled IBM Aspera High-Speed Transfer Server system-level security!
 
@@ -257,21 +266,23 @@ GUIベースで接続する際のセキュリティ設定になります。
 Asperaでファイル転送する際に利用するユーザーを作成します。ユーザーはOSユーザーをベースとして設定します。  
 今回は下記のようなユーザーを作成します。  
 
-group: aspgroup
-user1  
-username: aspuser01
-password: aspera
-user2
-username: aspuser02
-password: aspera
+- グループ 
+  - aspgroup
+
+- User
+
+|ユーザー名|パスワード|
+|:-|:-|
+|aspuser01|aspera|
+|aspuser02|aspera|
 
 ### 手順  
 下記コマンドを実行します。  
 
 ```
-groupadd -r aspgroup
-useradd -r aspuser01 -s /bin/aspshell -g aspgroup
-useradd -r aspuser02 -s /bin/aspshell -g aspgroup
+groupadd aspgroup
+useradd aspuser01 -s /bin/aspshell -G aspgroup
+useradd aspuser02 -s /bin/aspshell -G aspgroup
 
 passwd aspuser01
 # パスワード aspera を2回入力
@@ -294,13 +305,14 @@ chown aspuser02:aspgroup /home/aspuser02
 
 ## ファイル転送のDocumentRootの作成  
 ファイル転送でディレクトリを選択する際の起点となるDocumentRootを作成します。 
+設定上、所有者は *aspuser1* にしていますが、 *aspgroup* に **rw** の許可を与えます。  
 
 ### 手順  
 
 ```
 mkdir -p /docroot
 chown aspuser01:aspgroup /docroot
-chown aspuser02:aspgroup /docroot
+chmod 770 /docroot/
 ```
 
 ## Asperaへのユーザー登録  
@@ -324,21 +336,25 @@ chown aspuser02:aspgroup /docroot
 6. [docroot]タブで **絶対パス** のオーバーライドにチェックをつけ、有効な値に **/docroot** と入力します。  
 
 7. [帯域幅]のタブに移り、下記の設定をします。記載のない設定は変更しません。  
-   - 受信目標速度の限界値 (Kbps)
+   - 受信目標速度のデフォルト値 (Kbps)
      - オーバーライド: チェックを付ける  
      - 有効な値: 1000000
-   - 送信目標速度の限界値 (Kbps)
+   - 送信目標速度のデフォルト値 (Kbps)
      - オーバーライド: チェックを付ける  
      - 有効な値: 1000000
 
-8. 構成画面の[適用]をクリックし[OK]で完了します。  
+8. 構成画面の[適用]をクリックします。
+
+9. 4~8を繰り返し、aspuser02についても設定します。
+
+10. [OK]で完了します。  
 
 ## aspera.confへの追記  
 **aspera.conf**に設定を追記します。  
 
 ### 手順  
-1. vimでaspera.conf ファイルを開きます。  
-   `vim /opt/aspera/etc/aspera.conf`
+1. viでaspera.conf ファイルを開きます。  
+   `vi /opt/aspera/etc/aspera.conf`
 
 2. *<central_server>の前にエントリを追加します。  
    追加する内容
@@ -362,6 +378,9 @@ chown aspuser02:aspgroup /docroot
      </http_server>
    ```
 
+
+
+
 3. Asperahttpdを再起動します。
    `systemctl restart asperahttpd`
 
@@ -379,6 +398,14 @@ htpasswd /opt/aspera/etc/webpasswd aspuser01
 htpasswd /opt/aspera/etc/webpasswd aspuser02
 # パスワード aspera を2回入力します。
 ```
+
+## httpd サービスの再起動  
+Apacheのサービスを再起動しておきます。  
+
+### 手順
+下記コマンドを実行します。  
+`systemctl restart httpd`
+
 
 以上でAspera HST Serverのインストールが終わりました。
 次はLab3に進んでいただき、クライアントの設定を行います。
