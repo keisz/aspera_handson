@@ -99,6 +99,6 @@ systemctl restart sshd
 
 
 
-以上が**Labo1**です。
+以上が**Lab1**です。
 [Lab2](https://github.com/keisz/aspera_handson/blob/master/Lab2.md) に進んでください。  
 
