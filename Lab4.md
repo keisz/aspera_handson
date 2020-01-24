@@ -60,18 +60,22 @@ Hyper-V上に用意されているWindows 10を利用し、Aspera Desktopをイ�
 15. *接続*タブで左上の＋ボタンを押打し、ホスト、ユーザー、パスワードを指定します。  
     - ホスト: asperaserver.local
     - ユーザー: aspuser01
-    - パスワード: aspera  
-    
-    設定後、**接続のテスト**をクリックします。 **サーバーに正常にアクセスしました**を表示されることを確認し、**OK**をクリックします。   
+    - パスワード: aspera  <br>
+   ![](https://github.com/keisz/aspera_handson/blob/master/images/Lab4/73-1.png)
+
+   設定後、**接続のテスト**をクリックします。 **サーバーに正常にアクセスしました**を表示されることを確認し、**OK**をクリックします。   
 
 16. Desktop Clientの右カラムに **aspuser01@asperaserver.local** のエントリが追加されていますのでダブルクリックします。  
+   ![](https://github.com/keisz/aspera_handson/blob/master/images/Lab4/74-1.png)
 
-17. Aspera HST Serverの */docroot* のファイルが表示されます。フォルダーのアイコンをクリックし、新しいフォルダーを作ります。今回は **Desktop_client_test**と作っています。 作成したフォルダーをダブルクリックし移動します。   
+17. Aspera HST Serverの */docroot* のファイルが表示されます。フォルダーのアイコンをクリックし、新しいフォルダーを作ります。今回は **Desktop_client_test**と作っています。 作成したフォルダーをダブルクリックし移動します。  
+   ![](https://github.com/keisz/aspera_handson/blob/master/images/Lab4/76-1.png)
 
 18. 左側のカラムで デスクトップ(C:\users\user\desktop)に移動し、**テストファイル1.txt** を選択し、**[▶]** をクリックし転送します。
+   ![](https://github.com/keisz/aspera_handson/blob/master/images/Lab4/77-1.png)
 
 19. 転送中、完了後のステータスは下部の転送タブから確認できます。  
-
+   ![](https://github.com/keisz/aspera_handson/blob/master/images/Lab4/78-1.png)
 
 ## ファイル転送の試験及び帯域の変更  
 ファイル転送（アップロード）の試験と使用する帯域の設定について確認します。  
@@ -86,12 +90,13 @@ Hyper-V上に用意されているWindows 10を利用し、Aspera Desktopをイ�
 
 4. 右上の**設定**をクリックします。転送のステータスが表示されます。  
    デフォルト目標速度を ダウンロード、アップロードともに **1Gbps** に変更し、OKをクリックします。  
+   ![](https://github.com/keisz/aspera_handson/blob/master/images/Lab4/79-1.png)
 
 
 5. 再度、**testfile_1GB**を選択し、**[▶]** をクリックし転送します。転送速度が 45Mbps以上（画像では920Mbps)になり、高速に転送されていることが確認できます。  
 
 
 
-以上でLab4は終了になります。 次のLab5では、Linuxサーバー（CentOS)を使ってCLIベースでAsperaのファイル転送を行います。  
+以上でLab4は終了になります。 次の[Lab5](https://github.com/keisz/aspera_handson/edit/master/Lab5.md) では、Linuxサーバー（CentOS)を使ってCLIベースでAsperaのファイル転送を行います。  
 
 
