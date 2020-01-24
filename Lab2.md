@@ -428,5 +428,5 @@ Apacheのサービスを再起動しておきます。
 
 
 以上でAspera HST Serverのインストールが終わりました。
-次はLab3に進んでいただき、クライアントの設定を行います。
+次は[Lab3](https://github.com/keisz/aspera_handson/blob/master/Lab3.md) に進んでいただき、クライアントの設定を行います。
 
