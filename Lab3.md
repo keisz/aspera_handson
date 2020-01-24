@@ -15,7 +15,7 @@ Hyper-V上に用意されているWindows 10を利用し、Aspera Connectをイ�
 
 1. Hyper-Vコンソールを立ち上げます。  
 
-2. Windows10のエントリを右クリックし、[接続]を選択します。ポップアップウインドウが開く、Windows10のGUIコンソールが開きます。  
+2. **Windows10** のエントリを右クリックし、[接続]を選択します。ポップアップウインドウが開く、Windows10のGUIコンソールが開きます。  
 > Windows10の状態が実行中となっていない場合はWindows10を起動してください。  
 
 3. Userでログインします。ログインパスワードはHyper-Vホストのデスクトップ上においてある **config.txt** を確認してください。  
@@ -26,23 +26,32 @@ Hyper-V上に用意されているWindows 10を利用し、Aspera Connectをイ�
 2. 認証画面が表示されますので、Lab2で作成したユーザーアカウントを入力します。
    - user: aspuser01
    - password: aspera
-
+   ![](https://github.com/keisz/aspera_handson/blob/master/images/Lab3/20-1.png)
+   
 3. AsperaのWebUIが開き、ポップアップウインドウが表示されます。  
    **アドオンのインストール**をクリックします。  
-
+   ![](https://github.com/keisz/aspera_handson/blob/master/images/Lab3/21-1.png)
+   
 4. Firefoxの別タブが開き、Extensionのインストールが求められます。 **Add to Firefox** をクリックします。　
-
+   ![](https://github.com/keisz/aspera_handson/blob/master/images/Lab3/22-1.png)
+   
 5. 確認画面が表示されますので **追加** をクリックします。  
-
+   ![](https://github.com/keisz/aspera_handson/blob/master/images/Lab3/23-1.png)
+   
 6. WebUIタブに戻ります。右上にAdd-on追加のメッセージが表示されますので、**ok**をクリックし、**アプリケーションのダウンロード**のリンクをクリックします。  
-
+   ![](https://github.com/keisz/aspera_handson/blob/master/images/Lab3/27-1.png)
+   
 7. ファイルのダウンロードのポップアップウインドウが表示されます。 **ファイルの保存**をクリックします。  
-
+   ![](https://github.com/keisz/aspera_handson/blob/master/images/Lab3/28-1.png)
+   
 8. **↓**のアイコンをクリックするとダウンロードしたファイルが表示されますので、ファイルをクリックします。  
-
+   ![](https://github.com/keisz/aspera_handson/blob/master/images/Lab3/29-1.png)
+   
 9. *IBM Aspera Connect のセットアップ*が表示されますので、**開始**をクリックします。 
-
+   ![](https://github.com/keisz/aspera_handson/blob/master/images/Lab3/30-1.png)
+   
 10. *インストールが完了しました* が表示されたら閉じるをクリックします。
+   ![](https://github.com/keisz/aspera_handson/blob/master/images/Lab3/31-1.png)
 
 
 > WebUI接続中にAspera Connectのインストール確認の画面が表示されることが（多々）あります。  
