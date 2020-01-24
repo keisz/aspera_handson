@@ -142,6 +142,10 @@ AsperaではApacheを利用して、ユーザーが接続するためのWebUIを
 - ServerName にユーザーが接続するために利用するFQDNを指定。
 - **UseCanonicalName OFF** を追記します。
 
+> Hyper-Vコンソール上VMにアクセスしている場合、コピー＆ペーストができません。
+> 手打ちが難しい場合（コピー＆ペーストしたい場合）はHyper-Vホスト上にあるAsperaServer用のTeraTermのリンクをクリックしてください。
+> SSHで接続するため、Hyper-Vホストで開いているハンズオンテキストからコピー＆ペーストができます。
+
 ### 手順  
 1. Aspera Server上で端末を開き、`su -` でrootに変更します。  
 2. **http.conf** に ServerNameを追加します。 今回は **asperaserver.local** と指定します。
@@ -332,6 +336,7 @@ chmod 770 /docroot/
 
 ### 手順  
 1. AsperaServerのGUIにログインし、端末を開きます。  
+
 2. 下記コマンドを実行してAsperaのGUIコンソールを開きます。  
    ```
    su -
@@ -339,12 +344,16 @@ chmod 770 /docroot/
    asperascp &
    ```
 3. [構成]をクリックします。
+![](https://github.com/keisz/aspera_handson/blob/master/images/Lab1/8-1.png)
 
 4. [ユーザー]タブを開き、[＋]をクリックします。
+![](https://github.com/keisz/aspera_handson/blob/master/images/Lab1/9-1.png)
 
 5. **aspuser01** と入力し、[ok]をクリックします。
+![](https://github.com/keisz/aspera_handson/blob/master/images/Lab1/10-1.png)
 
 6. [docroot]タブで **絶対パス** のオーバーライドにチェックをつけ、有効な値に **/docroot** と入力します。  
+![](https://github.com/keisz/aspera_handson/blob/master/images/Lab1/11-1.png)
 
 7. [帯域幅]のタブに移り、下記の設定をします。記載のない設定は変更しません。  
    - 受信目標速度のデフォルト値 (Kbps)
