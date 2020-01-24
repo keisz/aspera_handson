@@ -36,5 +36,5 @@
 機器（VM）はすべてインターネット接続が可能としています。  
 
 ## アジェンダ
-- (Lab1 Aspera High-Speed Transfer Server の準備)[https://github.com/keisz/aspera_handson/blob/master/Lab1.md]
+- [Lab1 Aspera High-Speed Transfer Server の準備](https://github.com/keisz/aspera_handson/blob/master/Lab1.md)
 
