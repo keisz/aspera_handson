@@ -20,11 +20,16 @@ HST Serverに適用するライセンスファイルを用意します。
 ライセンスファイルは **AsperaServer**上で適用します。Aspera ServerのGUI上からFirefoxを起動しダウンロードします。
 
 ### 手順
-1. Hyper-Vコンソールを立ち上げます。  
+1. Hyper-Vコンソールを立ち上げます。
+![](https://github.com/keisz/aspera_handson/blob/master/images/Lab1/1-1.png)
+![](https://github.com/keisz/aspera_handson/blob/master/images/Lab1/2.png)
+
+2. すべてのVMを右クリックし起動します。
 
 2. Aspera Serverのエントリを右クリックし、[接続]を選択します。ポップアップウインドウが開く、Aspera ServerのGUIコンソールが開きます。  
 
 3. Userでログインします。ログインパスワードはHyper-Vホストのデスクトップ上においてある **config.txt** を確認してください。  
+![](https://github.com/keisz/aspera_handson/blob/master/images/Lab1/3.png)
 
 4. Aspera Serverのデスクトップ上で右クリックし**端末を開く**を選択します。
 
