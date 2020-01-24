@@ -79,7 +79,7 @@ Aspera HST Serverに接続する準備ができたので、WebUIに接続し、�
    ![](https://github.com/keisz/aspera_handson/blob/master/images/Lab3/34-1.png)
 
 5. 確認のポップアップが表示されます。 **許可**をクリックします。　　
-
+   ![](https://github.com/keisz/aspera_handson/blob/master/images/Lab3/40-1.png)
 
 6. ログイン画面が表示されます。ここではLab2で作成したLinux OSユーザーのIDとパスワードが必要になります。 **このパスワードを記憶する**にもチェックを付けておきます。
    - user: aspuser01
@@ -106,15 +106,19 @@ Aspera HST Serverに接続する準備ができたので、WebUIに接続し、�
    - password: aspera
 
 3. Aspera WebUIが表示されます。リストされている **テストファイル1.txt** にチェックをいれ、**ダウンロード** ボタンをクリックします。  
+   ![](https://github.com/keisz/aspera_handson/blob/master/images/Lab3/39-1.png)
 
 4. 確認のポップアップが表示されます。 **許可**をクリックします。
+   ![](https://github.com/keisz/aspera_handson/blob/master/images/Lab3/40-1.png)
 
 5. アクティビティー画面が表示されます。転送が開始され、完了と表示されたらファイルの転送が完了です。 **x** ボタンでウインドウを閉じます。
    - 認証画面が出た場合はLab2で作成した Linux OS ユーザーのIDとパスワードを入力します。  
+   ![](https://github.com/keisz/aspera_handson/blob/master/images/Lab3/42-1.png)
 
 6. ダウンロード先はOSログインユーザーの*ダウンロード*フォルダになります。
    - C:\Users\user\download
-
+   ![](https://github.com/keisz/aspera_handson/blob/master/images/Lab3/43-1.png)
+   
 
 ## WebUIからフォルダをアップロードしてみる  
 次に複数のファイルが保存されたフォルダをアップロードしてみます。  
@@ -122,16 +126,20 @@ Aspera HST Serverに接続する準備ができたので、WebUIに接続し、�
 
 ### 手順  
 1. Aspera WebUIにログインし、**フォルダーのアップロード** をクリックします。  
-
-2. デスクトップ上の **テストフォルダ** を選択します。  
+   ![](https://github.com/keisz/aspera_handson/blob/master/images/Lab3/44-1.png)
+   
+2. デスクトップ上の **テストフォルダ** を選択します。
+   ![](https://github.com/keisz/aspera_handson/blob/master/images/Lab3/45-1.png)
 
 3. 確認のポップアップが表示されます。 **許可**をクリックします。
-
+   ![](https://github.com/keisz/aspera_handson/blob/master/images/Lab3/40-1.png)
+   
 4. アクティビティー画面が表示されます。転送が開始され、完了と表示されたらファイルの転送が完了です。 **x** ボタンでウインドウを閉じます。
    - 認証画面が出た場合はLab2で作成した Linux OS ユーザーのIDとパスワードを入力します。  
+   ![](https://github.com/keisz/aspera_handson/blob/master/images/Lab3/47-1.png)
 
 5. WebUI画面を更新し、テストフォルダがリストされていること、ドリルダウンしてファイルが閲覧できることを確認します。    
-
+   ![](https://github.com/keisz/aspera_handson/blob/master/images/Lab3/48-1.png)
 
 ## 転送速度の検証  
 サイズの大きいファイルを転送し、アップロード時にどのくらいの速度がでるか検証します。  
