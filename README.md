@@ -36,5 +36,13 @@
 機器（VM）はすべてインターネット接続が可能としています。  
 
 ## アジェンダ
+Aspera High-Speed Transfer Serverのインストールと利用方法をWindows/Linuxどちらからも試すことができます。
+
 - [Lab1 Aspera High-Speed Transfer Server の準備](https://github.com/keisz/aspera_handson/blob/master/Lab1.md)
+- [Lab2 Aspera HST Server のインストール](https://github.com/keisz/aspera_handson/blob/master/Lab2.md)
+- [Lab3 Windows クライアントにAspera Connectの導入とアップロード/ダウンロード試験](https://github.com/keisz/aspera_handson/blob/master/Lab3.md)
+- [Lab4 Windows クライアントにAspera Desktopの導入とアップロード/ダウンロード試験](https://github.com/keisz/aspera_handson/blob/master/Lab4.md)
+- [Lab5 Linuxクライアントを使ったAspera CLIによるファイル転送](https://github.com/keisz/aspera_handson/blob/master/Lab5.md)
+- [Lab6 Aspera Console のインストールと設定](https://github.com/keisz/aspera_handson/blob/master/Lab6.md)
+
 
