@@ -97,6 +97,6 @@ Hyper-V上に用意されているWindows 10を利用し、Aspera Desktopをイ�
 
 
 
-以上でLab4は終了になります。 次の[Lab5](https://github.com/keisz/aspera_handson/edit/master/Lab5.md) では、Linuxサーバー（CentOS)を使ってCLIベースでAsperaのファイル転送を行います。  
+以上でLab4は終了になります。 次の[Lab5](https://github.com/keisz/aspera_handson/blob/master/Lab5.md) では、Linuxサーバー（CentOS)を使ってCLIベースでAsperaのファイル転送を行います。  
 
 
