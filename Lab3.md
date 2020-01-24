@@ -168,15 +168,16 @@ Aspera HST Serverに接続する準備ができたので、WebUIに接続し、�
 > **転送モニター**  
 > 転送モニターでは、転送速度の上限値、下限値を変更することができます。
 > モニター左側の**[▶]** をドラッグし上限に動かせます。  
-> 下記画像では上限値を350Mbpsあたりまで下げています。Asperaの転送速度の最大値はもう少し下ですので、300Mbps前後が最大値で転送が行われていることが確認できます。  
+> 下記画像では、300Mbps前後が最大値で転送が行われていることが確認できます。  
 >    ![](https://github.com/keisz/aspera_handson/blob/master/images/Lab3/52-2.png) 
 
 9. 3ファイルがリストされていることを確認します。  
-
+   ![](https://github.com/keisz/aspera_handson/blob/master/images/Lab3/53-1.png) 
+   
 10. ログを確認します。Aspera Connectのアイコンを右クリックし、**ログ・フォルダーを開く**を選択します。  
-
+//画像追加
 11. リストされているログファイルの **aspera-scp-transger.*** のファイルを開きます。  
-
+//画像追加
 12. 最終行から遡り、最初の改行を見つけます。改行後のログから最終行までが1つのファイル転送ログになっています。  
     おそらく**testfile_10GB**のログになっているかと思いますのでこのブロックの最初から終わりまでが10GBのファイル転送にかかった時間になります。  
 
@@ -197,14 +198,19 @@ Aspera Connectではインストール時にダウンロード先や転送速度
 
 ### 手順
 1. タスクトレイの中のAsperaのアイコンを右クリックし、**設定** を選択します。  
+//画像追加
 
 2. 設定のウインドウが表示されます。  *転送*タブを開きます。  
+   ![](https://github.com/keisz/aspera_handson/blob/master/images/Lab3/55-1.png)
 
 3. *ダウンロード*のセクションで **参照** をクリックします。
+   ![](https://github.com/keisz/aspera_handson/blob/master/images/Lab3/57-1.png)
 
 4. ダウンロード先を**デスクトップ**に指定し、**開く**をクリックします。  
+   ![](https://github.com/keisz/aspera_handson/blob/master/images/Lab3/58-1.png)
 
-5. **適用**をクリックし、*帯域幅*のタブをクリックします。  
+5. **適用**をクリックし、*帯域幅*のタブをクリックします。
+   ![](https://github.com/keisz/aspera_handson/blob/master/images/Lab3/56-1.png)
 
 6. ダウンロード、アップロード共にチェックを付け、**500MB**と指定します。  
 
@@ -215,7 +221,7 @@ Aspera Connectではインストール時にダウンロード先や転送速度
 > 速度が必要な場合は個別に設定をしてください。　　
 
 
-以上です。Lab4では Asperaのクライアントソフトである Aspera Desktop Clientを利用してファイルのアップロード/ダウンロードを実行してみます。  
+以上です。[Lab4](https://github.com/keisz/aspera_handson/blob/master/Lab4.md) では Asperaのクライアントソフトである Aspera Desktop Clientを利用してファイルのアップロード/ダウンロードを実行してみます。  
 
 
 
