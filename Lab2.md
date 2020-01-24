@@ -21,7 +21,7 @@ HST Serverに適用するライセンスファイルを用意します。
 
 ### 手順
 1. Hyper-Vコンソールを立ち上げます。 
-<br>
+</br>
 ![](https://github.com/keisz/aspera_handson/blob/master/images/Lab1/1-1.png)
 ![](https://github.com/keisz/aspera_handson/blob/master/images/Lab1/2.png)
 
