@@ -1,5 +1,7 @@
 # Lab1 Aspera High-Speed Transfer Server の準備
 
+[test](https://github.com/keisz/aspera_handson/blob/master/images/Lab1/3.png)
+
 Lab1ではAspera High-Speed Transfer Server（以下、HST Server）のインストールを行うための準備を行います。  
 設定する内容は下記になります。
 
