@@ -51,7 +51,7 @@ Hyper-V上に用意されているWindows 10を利用し、Aspera Connectをイ�
    ![](https://github.com/keisz/aspera_handson/blob/master/images/Lab3/30-1.png)
    
 10. *インストールが完了しました* が表示されたら閉じるをクリックします。
-   ![](https://github.com/keisz/aspera_handson/blob/master/images/Lab3/31-1.png)
+   ![](https://github.com/keisz/aspera_handson/blob/master/images/Lab3/33-1.png)
 
 
 > WebUI接続中にAspera Connectのインストール確認の画面が表示されることが（多々）あります。  
@@ -73,19 +73,26 @@ Aspera HST Serverに接続する準備ができたので、WebUIに接続し、�
    - password: aspera
 
 3. Aspera WebUIが表示されます。 *アップロード*のアイコンをクリックします。  
+   ![](https://github.com/keisz/aspera_handson/blob/master/images/Lab3/38-1.png)
 
 4. ファイルの選択画面が表示されます。 デスクトップに配置してある **テストファイル1.txt** を選択し、**開く**をクリックします。  
+   ![](https://github.com/keisz/aspera_handson/blob/master/images/Lab3/34-1.png)
 
 5. 確認のポップアップが表示されます。 **許可**をクリックします。　　
+
 
 6. ログイン画面が表示されます。ここではLab2で作成したLinux OSユーザーのIDとパスワードが必要になります。 **このパスワードを記憶する**にもチェックを付けておきます。
    - user: aspuser01
    - password: aspera
+  ![](https://github.com/keisz/aspera_handson/blob/master/images/Lab3/36-1.png)
 
 7. アクティビティー画面が表示されます。転送が開始され、完了と表示されたらファイルの転送が完了です。 **x** ボタンでウインドウを閉じます。  
+   ![](https://github.com/keisz/aspera_handson/blob/master/images/Lab3/37-1.png)
 
 8. Aspera WebUI上にファイルが表示されていない場合は **F5** で画面を更新します。  
    更新後、**テストファイル1.txt** がリストされていることを確認します。  
+   ![](https://github.com/keisz/aspera_handson/blob/master/images/Lab3/39-1.png)
+
 
 ## WebUIからファイルをダウンロードしてみる  
 先ほどアップロードしたファイルをダウンロードしてみます。  
