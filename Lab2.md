@@ -111,10 +111,14 @@ rpm -Uvh /root/ibm-aspera-hsts-3.9.3.174419-linux-64.rpm
 
 6. 表示されたポップアップウインドウで**ライセンスファイルのインポート**をクリックし、ダウンロードしたライセンスファイルを指定して適用します。  
    ダウンロードしたファイルは `/home/user/ダウンロード` にあります。フォルダーアイコンをクリックしディレクトリを変更して選択します。
+   ![](https://github.com/keisz/aspera_handson/blob/master/images/Lab1/4.png)
+   
 
 7. ライセンス情報が表示されることを確認後、ウインドウを閉じます。  
+   ![](https://github.com/keisz/aspera_handson/blob/master/images/Lab1/5.png)
 
 8. Aspera のGUIコンソールが改めて表示されることを確認します。
+   ![](https://github.com/keisz/aspera_handson/blob/master/images/Lab1/6.png)
 
 #### CLIでライセンスを確認してみる 
 端末上で `ascp -A` でライセンス情報を確認できます。  
