@@ -16,29 +16,46 @@ Hyper-V上に用意されているWindows 10を利用し、Aspera Desktopをイ�
 
 3. 検索結果で **aspera client - Aspera Downloads **のエントリがでますので、クリックします。  
    - URL: https://downloads.asperasoft.com/en/downloads/2
+   ![](https://github.com/keisz/aspera_handson/blob/master/images/Lab4/60-1.png)
 
 4. ドロップダウンリストから **v3.9.3 - Windows** を選択します。  
+   ![](https://github.com/keisz/aspera_handson/blob/master/images/Lab4/61-1.png)
 
 5. **Download**ボタンをクリックします。 ポップアップが表示されますので、**ファイルに保存**を選択し、ダウンロードします。  
+   ![](https://github.com/keisz/aspera_handson/blob/master/images/Lab4/62-1.png)
 
 6. Firefoxのダウンロードファイル一覧からダウンロードしたファイルをクリックし、実行します。
+   ![](https://github.com/keisz/aspera_handson/blob/master/images/Lab4/63-1.png)
 
 7. UACのセキュリティポップアップが表示されますので、*はい*を選択します。  
+   ![](https://github.com/keisz/aspera_handson/blob/master/images/Lab4/64-1.png)
 
 8. セットアップウィザードが表示されます。**次へ**をクリックします。  
+   ![](https://github.com/keisz/aspera_handson/blob/master/images/Lab4/65-1.png)
+
+8. ライセンスの許諾が表示されます。**同意します**を選択し、**次へ**をクリックします。
+   ![](https://github.com/keisz/aspera_handson/blob/master/images/Lab4/66-1.png)
 
 9. 標準を選択します。  
-   
+   ![](https://github.com/keisz/aspera_handson/blob/master/images/Lab4/67-1.png)
+
+10. **Confirm Create User** が表示されます。**はい**を選択します。
+   ![](https://github.com/keisz/aspera_handson/blob/master/images/Lab4/68-1.png)
+
 10. Asperaサービスアカウントを作成します。ユーザー名は変えずに、パスワードだけ入力し、**次へ**をクリックします。  
     - password: Aspera123!
+   ![](https://github.com/keisz/aspera_handson/blob/master/images/Lab4/69-1.png)
 
 11. ユーザー作成の警告が表示されます。 **はい**を選択します。  
 
 12. インストールをクリックします。  
+   ![](https://github.com/keisz/aspera_handson/blob/master/images/Lab4/70-1.png)
 
 13. **完了**をクリックします。 
+   ![](https://github.com/keisz/aspera_handson/blob/master/images/Lab4/71-1.png)
 
 14. Aspera Desktop Clientが表示されます。 **接続**をクリックします。 
+   ![](https://github.com/keisz/aspera_handson/blob/master/images/Lab4/74-1.png)
 
 15. *接続*タブで左上の＋ボタンを押打し、ホスト、ユーザー、パスワードを指定します。  
     - ホスト: asperaserver.local
