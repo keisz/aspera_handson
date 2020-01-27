@@ -95,6 +95,23 @@ Hyper-V上に用意されているWindows 10を利用し、Aspera Desktopをイ�
 
 5. 再度、**testfile_1GB**を選択し、**[▶]** をクリックし転送します。転送速度が 45Mbps以上（画像では920Mbps)になり、高速に転送されていることが確認できます。  
 
+## ファイル/フォルダ名の変更  
+Aspera HST Server上にファイルやフォルダに対しても操作が可能なことを確認します。
+ここでは、**速度検証**フォルダのフォルダ名の変更と **テストファイル1.txt**の試してみます。
+
+### 手順  
+1. Desktop Clientで左カラムをデスクトップ、右カラムをAspera HST Serverのルートフォルダーを表示します。  
+
+2. **速度検証**フォルダを右クリックし、**名前の変更**を選択します。
+   ![](https://github.com/keisz/aspera_handson/blob/master/images/Lab4/73-1.png)
+   
+3. フォルダ名を **speedtest** に変更し、Enterで確定します。
+
+4. **テストファイル1.txt** を選択し右クリックし、削除します。
+   ![](https://github.com/keisz/aspera_handson/blob/master/images/Lab4/74-1.png)
+   
+5. HST Serverのリストから変更および削除されていることを確認します。
+   ![](https://github.com/keisz/aspera_handson/blob/master/images/Lab4/75-1.png)
 
 
 以上でLab4は終了になります。 次の[Lab5](https://github.com/keisz/aspera_handson/blob/master/Lab5.md) では、Linuxサーバー（CentOS)を使ってCLIベースでAsperaのファイル転送を行います。  
