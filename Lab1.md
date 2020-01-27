@@ -33,8 +33,24 @@ SSH接続ポートは**33001**に変更しますが、今回は設定の都合�
 
 
 ### 手順  
-AsperaServer上で端末を開きます。  
-端末上で下記のコマンドを実行します。  
+AsperaServer上で端末を開きます。 
+
+1. Hyper-Vコンソールを立ち上げます。 
+
+
+![](https://github.com/keisz/aspera_handson/blob/master/images/Lab1/1-1.png)
+![](https://github.com/keisz/aspera_handson/blob/master/images/Lab1/2.png)
+
+2. すべてのVMを右クリックし起動します。
+
+2. Aspera Serverのエントリを右クリックし、[接続]を選択します。ポップアップウインドウが開く、Aspera ServerのGUIコンソールが開きます。  
+
+3. Userでログインします。ログインパスワードはHyper-Vホストのデスクトップ上においてある **config.txt** を確認してください。  
+![](https://github.com/keisz/aspera_handson/blob/master/images/Lab1/3.png)
+
+4. Aspera Serverのデスクトップ上で右クリックし**端末を開く**を選択します。
+
+5. 端末上で下記のコマンドを実行します。  
 
 ```
 su - 
@@ -57,7 +73,7 @@ Aspera HST ServerではSELinuxを無効にする必要があります。
 
 ### 設定方法
 下記コマンドでSELinuxを無効にします。  
-root ユーザーで実施します。
+端末を開き、root ユーザーで実施します。
 
 ```
 setenforce 0
@@ -89,7 +105,7 @@ port **22**についてはハンズオンの最後で禁止の設定を行いま
 全ての作業終了後、**Port 22** を再度 **#Port 22** に戻します。
 
 ### 手順  
-下記のコマンドを実行します。  
+端末を開き、rootユーザーで下記のコマンドを実行します。  
 
 ```
 sed -i".org" -e "/^#Port 22$/a Port 22" /etc/ssh/sshd_config
