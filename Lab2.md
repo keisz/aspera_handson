@@ -359,9 +359,11 @@ chmod 770 /docroot/
    - 受信目標速度のデフォルト値 (Kbps)
      - オーバーライド: チェックを付ける  
      - 有効な値: 1000000
+     ![](https://github.com/keisz/aspera_handson/blob/master/images/Lab2/70-1.png)
    - 送信目標速度のデフォルト値 (Kbps)
      - オーバーライド: チェックを付ける  
      - 有効な値: 1000000
+     ![](https://github.com/keisz/aspera_handson/blob/master/images/Lab2/71-1.png)
 
 8. 構成画面の[適用]をクリックします。
 
