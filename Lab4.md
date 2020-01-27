@@ -39,12 +39,12 @@ Hyper-V上に用意されているWindows 10を利用し、Aspera Desktopをイ�
 9. 標準を選択します。  
    ![](https://github.com/keisz/aspera_handson/blob/master/images/Lab4/67-1.png)
 
-10. **Confirm Create User** が表示されます。**はい**を選択します。
-   ![](https://github.com/keisz/aspera_handson/blob/master/images/Lab4/68-1.png)
-
 10. Asperaサービスアカウントを作成します。ユーザー名は変えずに、パスワードだけ入力し、**次へ**をクリックします。  
     - password: Aspera123! </br>
    ![](https://github.com/keisz/aspera_handson/blob/master/images/Lab4/69-1.png)
+
+10. **Confirm Create User** が表示されます。**はい**を選択します。
+   ![](https://github.com/keisz/aspera_handson/blob/master/images/Lab4/68-1.png)
 
 11. ユーザー作成の警告が表示されます。 **はい**を選択します。  
 
