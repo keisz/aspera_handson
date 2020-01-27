@@ -31,7 +31,7 @@ Aspera ConsoleのプログラムはLabのVM **CentOS** に導入します。
 
    ```
    # yum install -y perl
-   “Ç‚Ýž‚ñ‚¾ƒvƒ‰ƒOƒCƒ“:fastestmirror, langpacks
+   読み込んだプラグイン:fastestmirror, langpacks
    Determining fastest mirrors
     * base: ftp.iij.ad.jp
     * extras: ftp.iij.ad.jp
@@ -41,8 +41,8 @@ Aspera ConsoleのプログラムはLabのVM **CentOS** に導入します。
    updates                                                  | 2.9 kB     00:00
    (1/2): extras/7/x86_64/primary_db                          | 153 kB   00:00
    (2/2): updates/7/x86_64/primary_db                         | 5.9 MB   00:00
-   ƒpƒbƒP[ƒW 4:perl-5.16.3-294.el7_6.x86_64 ‚ÍƒCƒ“ƒXƒg[ƒ‹Ï‚Ý‚©ÅVƒo[ƒWƒ‡ƒ“‚Å‚·
-   ‰½‚à‚µ‚Ü‚¹‚ñ   
+   パッケージ 4:perl-5.16.3-294.el7_6.x86_64 はインストール済みか最新バージョンです
+   何もしません 
    ```
 
 6. Aspera Consoleをインストールします。  
@@ -102,6 +102,7 @@ Aspera ConsoleのプログラムはLabのVM **CentOS** に導入します。
        Key and certificate will be generated in this directory:
          /opt/aspera/common/apache/conf
      What IP address will managed nodes use to log to the database (by default)? 192.168.0.20  #← 同じように入力
+     What IP addresses and hostnames are allowed to access Console? localhost,192.168.0.20.192.168.0.1,centos.local  #← 同じように入力
 
    ===================== Settings =====================
    MySQL
@@ -116,6 +117,7 @@ Aspera ConsoleのプログラムはLabのVM **CentOS** に導入します。
    Console
      Enabled:            true
      DB Logger IP:       192.168.0.20
+     Accepted Host & IP (s):     localhost,192.168.0.20.192.168.0.1,centos.local
      Admin name:         aspadmin
      Admin email:        aspadmin@testdomain.com
      MySQL is local:     true
