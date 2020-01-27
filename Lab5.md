@@ -87,20 +87,20 @@ Aspera CLIをダウンロードし利用できるように設定します。
    - 実行するコマンド
    ```
    export ASPERA_SCP_PASS=aspera
-   ascp -P 33001 -l 1000000 aspuser01@asperaserver.local:/testfile_10GB ./
+   ascp -P 33001 -l 1000000 aspuser01@asperaserver.local:/speedtest/testfile_10GB ./
    ```
 
    - 結果  
    ```
    # export ASPERA_SCP_PASS=aspera
-   # ascp -P 33001 -l 1000000 aspuser01@asperaserver.local:/testfile_10GB ./
-   testfile_10GB                                 100%   10GB  576Mb/s    01:56
-   Completed: 10485760K bytes transferred in 116 seconds
-    (738472K bits/sec), in 1 file.
+   # ascp -P 33001 -l 1000000 aspuser01@asperaserver.local:/speedtest/testfile_10GB ./
+   testfile_10GB                                                                        100%   10GB  808Mb/s    01:53
+   Completed: 10485760K bytes transferred in 113 seconds
+    (757254K bits/sec), in 1 file.
    ```
 
    実施した結果のかかった時間をメモしておきます。
-   - ここでは、 116 seconds 
+   - ここでは、 113 seconds 
 
 > aspuser01のパスワード指定
 > 今回は環境変数 **ASPERA_SCP_PASS** にパスワードをセットすることで、ascpコマンド実行時にパスワードを入力することを省いています。 `export ASPERA_SCP_PASS=aspera` を実行せずにascpコマンドで転送を行うとパスワードの入力を求められます。
@@ -122,17 +122,17 @@ CLIベースでAsperaファイル転送を行いましたが、SCPと行った�
   `rm -rf testfile_10GB`
 
 2. **testfile_10GB** をダウンロードします。  
-   `scp root@asperaserver.local:/docroot/testfile_10GB ./`
+   `scp root@asperaserver.local:/docroot/speedtest/testfile_10GB ./`
+   パスワードは Aspera ServerのRootパスワード（デスクトップのファイルに記載）です。
 
    ```
-   # scp root@asperaserver.local:/docroot/testfile_10GB ./
+   # scp root@asperaserver.local:/docroot/speedtest/testfile_10GB ./
    The authenticity of host 'asperaserver.local (192.168.0.10)' can't be established.
    ECDSA key fingerprint is SHA256:8qsbDES9KHfcQLP6g0F/3xwf+AS3JVwip4ydBQ8+wOM.
    ECDSA key fingerprint is MD5:95:5b:78:53:c4:c6:40:9d:4f:0a:b1:9e:77:05:b6:3c.
-   Are you sure you want to continue connecting (yes/no)? yes  # yesと入力しEnter
-   Warning: Permanently added 'asperaserver.local,192.168.0.10' (ECDSA) to the list of known hosts.
-   root@asperaserver.local's password:  # Asperaserver.localのrootのパスワードを入力  
-   testfile_10GB                                                            100%   10GB  92.8MB/s   01:50
+   Are you sure you want to continue connecting (yes/no)? yes
+   Warning: Permanently added 'asperaserver.local,192.168.0.10' (ECDSA) to the list of known hosts.                                        root@asperaserver.local's password:
+   testfile_10GB                                                                        100%   10GB 107.1MB/s   01:25
    ```
 
 ## パケットロスや遅延が発生している環境での比較  
@@ -167,13 +167,13 @@ CLIベースでAsperaファイル転送を行いましたが、SCPと行った�
    `rm -rf testfile_*`
 
 3. SCPでファイルコピーをします。今回は時間短縮のために1GBのファイルで検証します。
-   `scp root@asperaserver.local:/docroot/testfile_1GB ./`
+   `scp root@asperaserver.local:/docroot/speedtest/testfile_1GB ./`
 
    - 結果
    ```
-   # scp root@asperaserver.local:/docroot/testfile_1GB ./
+   # scp root@asperaserver.local:/docroot/speedtest/testfile_1GB ./
    root@asperaserver.local's password:
-   testfile_1GB                                                             100% 1024MB  51.1MB/s   00:20
+   testfile_1GB                                                                         100% 1024MB  52.2MB/s   00:19
    ```
 
 4. SCPで転送したファイルを削除し、Asperaでファイルを転送します。  
@@ -181,21 +181,21 @@ CLIベースでAsperaファイル転送を行いましたが、SCPと行った�
    ```
    rm -rf testfile_*
    export ASPERA_SCP_PASS=aspera
-   ascp -P 33001 -l 1000000 aspuser01@asperaserver.local:/testfile_1GB ./
+   ascp -P 33001 -l 1000000 aspuser01@asperaserver.local:/speedtest/testfile_1GB ./
    ```
    
    - 結果  
    ```
-   # ascp -P 33001 -l 1000000 aspuser01@asperaserver.local:/testfile_1GB ./
-   testfile_1GB                                                             100% 1024MB  374Mb/s    00:14
-   Completed: 1048576K bytes transferred in 14 seconds
-    (588447K bits/sec), in 1 file.
+   # ascp -P 33001 -l 1000000 aspuser01@asperaserver.local:/speedtest/testfile_1GB ./
+   testfile_1GB                                                                         100% 1024MB  688Mb/s    00:12
+   Completed: 1048576K bytes transferred in 12 seconds   
+    (712060K bits/sec), in 1 file.
    ```
 
 #### 100ms遅延/3%パケットロス想定
 
 1. 意図的にネットワークに遅延とパケットロスを発生させます。
-   `tc qdisc del dev ens192 root`
+   `tc qdisc del dev eth0 root`
      - 前回の設定を削除します。
 
    `tc qdisc add dev eth0 root netem loss 3% delay 100ms`
@@ -211,14 +211,14 @@ CLIベースでAsperaファイル転送を行いましたが、SCPと行った�
 2. 前の手順で使ったファイルが残っていれば削除します。  
    `rm -rf testfile_*`
 
-3. SCPでファイルコピーをします。今回は時間短縮のために1GBのファイルで検証します。
-   `scp root@asperaserver.local:/docroot/testfile_1GB ./`
+3. SCPでファイルコピーをします。再度、時間短縮のために1GBのファイルで検証します。
+   `scp root@asperaserver.local:/docroot/speedtest/testfile_1GB ./`
 
    - 結果
    ```
-   # scp root@asperaserver.local:/docroot/testfile_1GB ./
+   # scp root@asperaserver.local:/docroot/speedtest/testfile_1GB ./
    root@asperaserver.local's password:
-   testfile_1GB                                                             100% 1024MB   9.5MB/s   01:47
+   testfile_1GB                                                                         100% 1024MB   9.5MB/s   01:47
    ```
 
 4. SCPで転送したファイルを削除し、Asperaでファイルを転送します。  
@@ -226,15 +226,15 @@ CLIベースでAsperaファイル転送を行いましたが、SCPと行った�
    ```
    rm -rf testfile_1GB
    export ASPERA_SCP_PASS=aspera
-   ascp -P 33001 -l 1000000 aspuser01@asperaserver.local:/testfile_1GB ./
+   ascp -P 33001 -l 1000000 aspuser01@asperaserver.local:/speedtest/testfile_1GB ./
    ```
    
    - 結果  
    ```
-   # ascp -P 33001 -l 1000000 aspuser01@asperaserver.local:/testfile_1GB ./
-   testfile_1GB                                                             100% 1024MB  464Mb/s    00:13
-   Completed: 1048576K bytes transferred in 13 seconds
-   (628900K bits/sec), in 1 file.
+   #    ascp -P 33001 -l 1000000 aspuser01@asperaserver.local:/speedtest/testfile_1GB ./
+   testfile_1GB                                                                         100% 1024MB  386Mb/s    00:12
+   Completed: 1048576K bytes transferred in 12 seconds
+    (681484K bits/sec), in 1 file.
    ```
 
 ネットワーク遅延がなく、安定しているネットワーク環境間（同一DCなど）であればSCPなどでも問題ありませんが、遠隔地且つパケットロスが発生するかもしれないネットワークになればなるほどAsperaを使うことでより安定したサービスを提供できるようになります。
@@ -243,12 +243,14 @@ CLIベースでAsperaファイル転送を行いましたが、SCPと行った�
 - ネットワーク遅延などを発生しない環境で1GBファイルをAsperaで転送した結果
 
 ```
-# ascp -P 33001 -l 1000000 aspuser01@asperaserver.local:/testfile_1GB ./
-testfile_1GB                                                             100% 1024MB  667Mb/s    00:13
-Completed: 1048576K bytes transferred in 13 seconds
- (648806K bits/sec), in 1 file.
+# tc qdisc del dev eth0 root
+# rm -rf testfile_1GB
+# ascp -P 33001 -l 1000000 aspuser01@asperaserver.local:/speedtest/testfile_1GB ./
+testfile_1GB                                                                         100% 1024MB  426Mb/s    00:11
+Completed: 1048576K bytes transferred in 11 seconds
+ (735574K bits/sec), in 1 file.
 ```
 
 
-以上でLab5は終わりです。次のLab6では Aspera Consoleをインストールし、Aspera HST Serverを管理します。  
+以上でLab5は終わりです。次の[Lab6](https://github.com/keisz/aspera_handson/blob/master/Lab6.md)では Aspera Consoleをインストールし、Aspera HST Serverを管理します。  
 
