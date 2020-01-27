@@ -177,7 +177,7 @@ Aspera HST Serverに接続する準備ができたので、WebUIに接続し、�
 10. ログを確認します。Aspera Connectのアイコンを右クリックし、**ログ・フォルダーを開く**を選択します。  
    ![](https://github.com/keisz/aspera_handson/blob/master/images/Lab3/60-1.png)
    
-11. リストされているログファイルの **aspera-scp-transger.*** のファイルを開きます。  
+11. リストされているログファイルの **aspera-scp-transfer.0** のファイルを開きます。  
    ![](https://github.com/keisz/aspera_handson/blob/master/images/Lab3/61-1.png)
 
 12. 最終行から遡り、最初の改行を見つけます。改行後のログから最終行までが1つのファイル転送ログになっています。  
