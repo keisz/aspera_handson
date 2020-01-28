@@ -65,10 +65,10 @@ Aspera HST Serverに接続する準備ができたので、WebUIに接続し、�
 
 
 ### 手順  
-1. Firefoxで下記URLにアクセスします。  
+1. 先ほどまで使っていたFirefoxを開きます。閉じていた場合はFirefoxで下記URLにアクセスします。  
    - http://asperaserver.local/aspera/user
 
-2. 認証画面が表示されますので、Lab2で作成したユーザーアカウントを入力します。
+　 再度、Firefoxを開いた場合は認証画面が表示されますので、Lab2で作成したユーザーアカウントを入力します。
    - user: aspuser01
    - password: aspera
 
@@ -128,7 +128,7 @@ Aspera HST Serverに接続する準備ができたので、WebUIに接続し、�
 1. Aspera WebUIにログインし、**フォルダーのアップロード** をクリックします。  
    ![](https://github.com/keisz/aspera_handson/blob/master/images/Lab3/44-1.png)
    
-2. デスクトップ上の **テストフォルダ** を選択します。
+2. デスクトップ上の **テストフォルダ** を選択し、フォルダーの選択をクリックします。
    ![](https://github.com/keisz/aspera_handson/blob/master/images/Lab3/45-1.png)
 
 3. 確認のポップアップが表示されます。 **許可**をクリックします。
