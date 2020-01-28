@@ -103,12 +103,12 @@ Aspera HST Server上にファイルやフォルダに対しても操作が可能
 1. Desktop Clientで左カラムをデスクトップ、右カラムをAspera HST Serverのルートフォルダーを表示します。  
 
 2. **速度検証**フォルダを右クリックし、**名前の変更**を選択します。
-   ![](https://github.com/keisz/aspera_handson/blob/master/images/Lab4/73-2.png)
+   ![](https://github.com/keisz/aspera_handson/blob/master/images/Lab4/73-3.png)
    
 3. フォルダ名を **speedtest** に変更し、Enterで確定します。
 
 4. **テストファイル1.txt** を選択し右クリックし、削除します。
-   ![](https://github.com/keisz/aspera_handson/blob/master/images/Lab4/74-2.png)
+   ![](https://github.com/keisz/aspera_handson/blob/master/images/Lab4/74-3.png)
    
 5. HST Serverのリストから変更および削除されていることを確認します。
    ![](https://github.com/keisz/aspera_handson/blob/master/images/Lab4/75-2.png)
