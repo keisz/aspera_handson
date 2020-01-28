@@ -361,7 +361,7 @@ chmod 770 /docroot/
 1. viでaspera.conf ファイルを開きます。  
    `vi /opt/aspera/etc/aspera.conf`
 
-2. *<central_server>の前にエントリを追加します。  
+2. **<central_server>**の前にエントリを追加します。  
    追加する内容
    ```
     <WEB
