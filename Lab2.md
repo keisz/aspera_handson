@@ -108,6 +108,7 @@ rpm -Uvh /root/ibm-aspera-hsts-3.9.3.174419-linux-64.rpm
 8. Aspera のGUIコンソールが改めて表示されることを確認します。
    ![](https://github.com/keisz/aspera_handson/blob/master/images/Lab1/6.png)
 
+
 #### CLIでライセンスを確認してみる 
 端末上で `ascp -A` でライセンス情報を確認できます。  
 
@@ -133,6 +134,11 @@ AsperaではApacheを利用して、ユーザーが接続するためのWebUIを
 > Hyper-Vコンソール上VMにアクセスしている場合、コピー＆ペーストができません。
 > 手打ちが難しい場合（コピー＆ペーストしたい場合）はHyper-Vホスト上にあるAsperaServer用のTeraTermのリンクをクリックしてください。
 > SSHで接続するため、Hyper-Vホストで開いているハンズオンテキストからコピー＆ペーストができます。
+
+> 変更方法について
+> 「手動で変更する方法」と「ワンラインで変更する方法」で記載してある箇所があります。
+> その場合はどちらかの方法で実施してください。
+> 手打ちが難しい場合はHyper-VホストのデスクトップにあるTeraTermのショートカット**AsperaServer**を起動し、コピー＆ペーストで対応してください。
 
 ### 手順  
 1. Aspera Server上で端末を開き、`su -` でrootに変更します。  
