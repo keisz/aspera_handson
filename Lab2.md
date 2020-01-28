@@ -301,19 +301,6 @@ passwd aspuser02
 # パスワード aspera を2回入力
 ```
 
-## Home Dirの作成  
-作成したユーザー用のHome Dirを作成します。  
-
-### 手順  
-下記コマンドを実行します。
-
-```
-mkdir -p /home/aspuser01
-mkdir -p /home/aspuser02
-chown aspuser01:aspgroup /home/aspuser01
-chown aspuser02:aspgroup /home/aspuser02
-```
-
 ## ファイル転送のDocumentRootの作成  
 ファイル転送でディレクトリを選択する際の起点となるDocumentRootを作成します。 
 設定上、所有者は *aspuser1* にしていますが、 *aspgroup* に **rw** の許可を与えます。  
