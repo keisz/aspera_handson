@@ -215,6 +215,9 @@ AsperaではApacheを利用して、ユーザーが接続するためのWebUIを
    `systemctl start httpd`
    すでに起動している場合は `systemctl restart httpd` で再起動します。  
    サービスのステータス確認は `systemctl status httpd` 
+   
+6. httpd serviceのサービスをEnable（自動起動）にします。
+   `systemctl enbale httpd`
 
 ## System-Level セキュリティ設定  
 GUIベースで接続する際のセキュリティ設定になります。
