@@ -18,8 +18,8 @@ Hyper-V上に用意されているWindows 10を利用し、Aspera Desktopをイ�
    - URL: https://downloads.asperasoft.com/en/downloads/2
    ![](https://github.com/keisz/aspera_handson/blob/master/images/Lab4/60-1.png)
 
-4. ドロップダウンリストから **v3.9.3 - Windows** を選択します。  
-   ![](https://github.com/keisz/aspera_handson/blob/master/images/Lab4/61-1.png)
+4. ドロップダウンリストから **v3.9.6 - Windows** を選択します。  
+   ![](https://github.com/keisz/aspera_handson/blob/master/images/Lab4/102-1.png)
 
 5. **Download**ボタンをクリックします。 ポップアップが表示されますので、**ファイルに保存**を選択し、ダウンロードします。  
    ![](https://github.com/keisz/aspera_handson/blob/master/images/Lab4/62-1.png)
