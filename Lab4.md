@@ -63,7 +63,7 @@ Hyper-V上に用意されているWindows 10を利用し、Aspera Desktopをイ�
     - パスワード: aspera  <br>
    ![](https://github.com/keisz/aspera_handson/blob/master/images/Lab4/73-2.png)
 
-   設定後、**接続のテスト**をクリックします。 **サーバーに正常にアクセスしました**を表示されることを確認し、**OK**をクリックします。   
+    設定後、**接続のテスト**をクリックします。 **サーバーに正常にアクセスしました**を表示されることを確認し、**OK**をクリックします。   
 
 16. Desktop Clientの右カラムに **aspuser01@asperaserver.local** のエントリが追加されていますのでダブルクリックします。  
    ![](https://github.com/keisz/aspera_handson/blob/master/images/Lab4/74-2.png)
