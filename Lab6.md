@@ -339,7 +339,7 @@ Lab2で作成したHSTサーバーをAspera Consoleに登録します。
              node_admin              console_admin    [impersonation]
    ```
 
-#### Aspera Console（VM: centos）で作業
+#### Hyper-Vホストで作業
 1. Hyper-Vホスト上でFirefoxを起動し、 **https://192.168.0.20/** にアクセスします。HTTPSのエラーなどは回避してログイン画面まで進みます。  
    
 2. ログイン画面で下記の情報を入力します。  
